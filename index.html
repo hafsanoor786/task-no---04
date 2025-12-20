@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>task no 04</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  #top-section {
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  #logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #logo span {
+    color: #ff6600;
+  }
+
+  #menu {
+    float: right;
+  }
+
+  #menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu ul li {
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 16px;
+    color: black;
+    vertical-align: middle;
+  }
+
+  #menu ul li:hover {
+    color: #20b15a;
+  }
+
+  .services-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .services-dropdown button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .services-dropdown:hover button {
+    color: #20b15a;
+  }
+
+  .services-dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    left: -20px;
+  }
+
+  .dropdown-list li {
+    display: block;
+    padding: 12px 20px;
+    margin-left: 0;
+    color: black;
+  }
+
+  .dropdown-list li:hover {
+    background-color: #e8f5e9;
+    color: #20b15a;
+  }
+
+  #buttons {
+    display: inline-block;
+    margin-left: 40px;
+  }
+
+  #login-button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: 1px solid #20b15a;
+    background: white;
+    color: black;
+    font-size: 16px;
+  }
+
+  #register-button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    background-color: #20b15a;
+    color: white;
+    border: none;
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+  #main-section {
+    padding: 60px 80px;
+    display: flex;
+  }
+
+  #content {
+    width: 50%;
+    padding-right: 40px;
+  }
+
+  #heading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  #para2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  #btn {
+    padding: 20px 30px;
+    border-radius: 16px;
+    background-color: #20b15a;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+
+  #image-section {
+    width: 50%;
+    text-align: right;
+  }
+
+  #image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #main-img {
+    background-color: white;
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #images {
+
+    display: flex;
+    gap: 90px;
+
+  }
+
+  #row {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  #back {
+    background-color: white;
+    padding: 50px;
+  }
+
+  #btn1 {
+    border-color: white;
+    border: none;
+    font-size: 15px;
+  }
+
+  #btn2 {
+    border-color: white;
+    border: none;
+    font-size: 15px;
+  }
+
+  #btn3 {
+    border-color: white;
+    border: none;
+    font-size: 15px;
+  }
+
+  .para {
+    color: #20b15a;
+  }
+
+  #ground {
+    color: #FAFFFB;
+    margin-left: -100px;
+  }
+
+  .container {
+    background-color: white;
+    padding: 40px;
+  }
+
+  #para2 {
+    color: #20b15a;
+  }
+
+  .container2 {
+    background-color: white;
+    padding: 10px;
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .container3 {
+    background-color: white;
+    padding: 40px;
+  }
+
+  #img1 {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  #head4 {
+    margin-top: -50px;
+    margin-left: 70px;
+    font: bold;
+
+  }
+
+  #pairing {
+    margin-top: -20px;
+    margin-left: 70px;
+  }
+
+  #coli {
+    color: #20b15a;
+  }
+
+  .card4,
+  .card5,
+  .card6 {
+    border-left: solid silver;
+    border-bottom: solid silver;
+    gap: 10px;
+    border-right: solid silver;
+    border-radius: 10px;
+    padding: 10px;
+
+  }
+
+  #coli2 {
+    font-size: bold;
+  }
+
+  #img11 {
+    margin-top: -150px;
+    margin-left: -200px;
+  }
+
+  #container {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+  }
+
+  #count {
+    color: gray;
+    font-size: bold;
+  }
+
+  #sub {
+    color: #20b15a;
+    font-size: bold;
+  }
+
+  #container input {
+    padding: 20px;
+    width: 550px;
+    border-radius: 10px;
+
+  }
+
+  #container button {
+    background-color: #ff6600;
+    color: white;
+    border: #ff6600;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100px;
+    margin-left: -120px;
+  }
+
+  .container4 {
+    background-color: #00CA72;
+    padding: 50px;
+    display: flex;
+    gap: 300px;
+
+  }
+
+  #nobullet {
+    list-style-type: none;
+    margin-top: -10px;
+    margin-left: -30px;
+  }
+
+  .card7 h4 {
+    font: bold;
+    font-size: 30px;
+  }
+
+  .card8 h5 {
+    font: bold;
+    font-size: 20px;
+  }
+
+  .card9 h5 {
+    font: bold;
+    font-size: 20px;
+  }
+
+  .card9 p {
+    font: bold;
+  }
+</style>
+
+<body>
+  <div id="top-section">
+    <div id="logo">Design<span>AGENCY</span></div>
+    <div id="menu">
+      <ul>
+        <li class="services-dropdown">
+          <button>Services ▼</button>
+          <ul class="dropdown-list">
+            <li>Web Design</li>
+            <li>Graphic Design</li>
+            <li>UI/UX Design</li>
+            <li>Branding</li>
+            <li>Digital Marketing</li>
+          </ul>
+        </li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li id="buttons">
+          <button id="login-button">Login</button>
+          <button id="register-button">Register</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main-section">
+    <div id="content">
+      <h1 id="heading">
+        Increase Your <br />
+        Customers Loyalty <br />
+        and Satisfaction
+      </h1>
+      <p id="para2">
+        We help bussiness like your earn more customers, <br />
+        standout from competitors, make more money
+      </p>
+      <button id="btn">Get Started</button>
+    </div>
+    <div id="image-section">
+      <img src="./image.png" alt="img" />
+    </div>
+  </div>
+  <div id="main-img">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968863.png" alt="" width="100">
+    <img src="https://1000logos.net/wp-content/uploads/2021/05/Trello-logo.png" alt="" width="100">
+    <img src="https://images.seeklogo.com/logo-png/39/2/monday-logo-png_seeklogo-394606.png" alt="" width="100">
+    <div id="images">
+      <img src="./a96f1027933ad2abf5893865392a144599344b60 (6).png" alt="" width="100" height="20">
+      <img src="./1a5d40e3584caaf1ea80f6590e86d3891e564763 (1).png" alt="" width="100" height="20">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div id="back">
+    <p class="para">WHAT WE DO</p>
+    <h1>We provide the Perfect Solution <br> to your business growth</h1>
+    <div id="row">
+      <div class="card">
+        <img src="./Activity (1).svg" alt="">
+        <h1>Grow Your Business </h1>
+        <p>We help identify the best ways to <br> improve your business</p>
+        <button id="btn1">Learn More → </button>
+      </div>
+      <div class="card2">
+        <img src="./Heart.svg" alt="">
+        <h1>Improved brand loyalty</h1>
+        <p>We help identify the best ways to <br> improve your business</p>
+        <button id="btn2">Learn More →</button>
+      </div>
+      <div class="card3">
+        <img src="./Work.svg" alt="">
+        <h1>Improve Bussiness Mode</h1>
+        <p>We help identify the best ways to <br> improve your business</p>
+        <button id="btn3">Learn More →</button>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div id="ground">
+    <img src="./Frame 14.svg" alt="">
+  </div>
+  <div class="container">
+    <p id="para2">Our Portfolio</p>
+    <h1>We provide the Perfect Solution <br> to your business growth</h1>
+    <img src="./Frame 24.svg" alt="">
+    <img src="./Frame 25.svg" alt="">
+    <img src="./Frame 26.svg" alt="">
+    <img src="./Frame 27.svg" alt="">
+  </div>
+  </div>
+  <div class="container3">
+    <p id="coli">TESTMONIALS</p>
+    <h1 id="coli2"> See What Our Customer <br> Say About Us</h1>
+    <div class="container2">
+      <div class="card4">
+        <p>Thank You for your service. I am very pleased <br> with the result. I have seen exponencial growth <br> in my
+          business and its all thanks to your <br> amazing service</p>
+        <img id="img1" src="./2fbd3ecd719fed8cfa93d844a1767ae30971bf31.png" alt="" height="50">
+        <h4 id="head4">Emily Stones</h4>
+        <p id="pairing">CEO, Marketing Guru</p>
+      </div>
+      <div class="card5">
+        <p>Thank You for your service. I am very pleased <br> with the result. I have seen exponencial growth <br> in my
+          business and its all thanks to your <br> amazing service</p>
+        <img id="img1" src="./2fbd3ecd719fed8cfa93d844a1767ae30971bf31.png" alt="" height="50">
+        <h4 id="head4">Emily Stones</h4>
+        <p id="pairing">CEO, Marketing Guru</p>
+      </div>
+      <div class="card6">
+        <p>Thank You for your service. I am very pleased <br> with the result. I have seen exponencial growth <br> in my
+          business and its all thanks to your <br> amazing service</p>
+        <img id="img1" src="./2fbd3ecd719fed8cfa93d844a1767ae30971bf31.png" alt="" height="50">
+        <h4 id="head4">Emily Stones</h4>
+        <p id="pairing">CEO, Marketing Guru</p>
+      </div>
+      <img id="img11" src="./Frame 34.svg" alt="" height="50">
+    </div>
+  </div>
+  <div id="container">
+    <p id="sub">SUBSCRIBE</p>
+    <h1>Subscribe To Get The Latest <br> News About Us</h1>
+    <p id="count">Please Drop Your Email Below To Get Daily Update About What We Do</p>
+    <form>
+      <input type="text" ENTER placeholder="Enter Your Email Adress">
+      <button>Subscribe</button>
+    </form>
+    <br>
+    <br>
+    <br>
+  </div>
+  <div class="container4">
+    <div class="card7">
+      <h4>WEB LOGO</h4>
+      <p>Some footer text about the <br> Agency. Just a little description to <br> help people understand you better</p>
+      <img src="./Frame 19705.svg" alt="" height="25">
+      <br>
+      <br>
+      <br>
+      <p>Copyright Design Agency 2022</p>
+    </div>
+    <div class="card8">
+      <h5>Quick Links</h5>
+      <ul id="nobullet">
+        <li>Services</li>
+        <br>
+        <li>Portfolio</li>
+        <br>
+        <li>About Us</li>
+        <br>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+    <div class="card9">
+      <h5>Address</h5>
+      <p>Design Aggency Head Office.</p>
+      <p>Airport Road</p>
+      <p>United Arab Emirate</p>
+    </div>
+  </div>
+</body>
+
+</html>
