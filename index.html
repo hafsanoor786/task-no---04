@@ -4,122 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task no 05</title>
-
+    <title>Document</title>
     <style>
-        .container {
-            background-color: white;
+        * {
+            font-family: sans-serif;
         }
 
-        .container p {
-            margin-left: 30px;
-            font: bold;
-            display: inline-block;
-            margin-top: 10px;
+        div {
+            margin-top: -87px;
+            margin-left: 190px;
         }
 
-        .container h1 {
-            margin-top: -200px;
-            margin-left: 200px;
-            font-size: 50px;
-            font: bold;
-            display: inline-block;
-            border-bottom: solid yellowgreen;
-        }
-
-        .container button {
-            border-radius: 500px;
-            padding: 25px;
-            background-color:  yellow;
-            border: yellow;
-            float: right;
-            margin-top: -10px;
-            margin-right: 100px;
-        }
-
-        .container1 {
-            background-color: black;
+        #btn {
+            padding: 7px;
+            background-color: rgb(98, 162, 98);
             color: white;
-            display: flex;
-            gap: 70px;
+            border: none;
+            border-radius: 2px;
         }
 
-        .container1 h1 {
-            color: white;
-            padding: 30px;
-        }
-
-        #img {
-            background-color: red;
+        #btn:hover {
+            background-color: pink;
             color: black;
         }
 
-        #raar {
-            text-decoration: underline;
+        #img {
+            margin-left: 290px;
+            margin-top: -300px;
         }
 
-        #icon {
-            display: flex;
-            gap: 50px;
+        #puting {
+            padding: 7px;
+
+        }
+
+        #put {
+            padding: 7px;
+            width: 50%;
+        }
+
+        #put-it {
+            padding: 25px;
+            width: 45%;
         }
     </style>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
-    <div class="container">
+    <h2>Get in touch with us</h2>
+    <form>
+        <label for="">FULL NAME</label>
         <br>
         <br>
-        <br>
-        <p>HEARD <br> ENOUGH?<i class="fa-solid fa-arrow-right"></i></p>
-        <h1>Contact us</h1>
-        <button><i class="fa-solid fa-arrow-right"></i></button>
+        <input id="puting" type="text" placeholder="Name">
         <br>
         <br>
-        <br>
-    </div>
-    <div class="container1">
-        <br>
-        <br>
-        <h1>The agency <br> for impatient <br> brands&reg;</h1>
-        <div class="card1">
-            <p>LONDON</p>
+        <div>
+            <label for="">EMAIL ADRESS</label>
             <br>
-            <p id="raar">newbusiness@weareimpero.com</p>
-            <p>+44 20 7998 7571</p>
-            <p>Unit 306, Metropolitan Wharf,</p>
-            <p>70 Wapping Wall, London E1W 3SS</p>
             <br>
-            <P id="raar">SEE ON MAP↗</P>
+            <input id="puting" type="text" placeholder="Email">
         </div>
-        <div class="card2">
-            <p>BUENOS AIRES</p>
-            <br>
-            <p id="raar">buenosaires@weareimpero.com</p>
-            <p>+54 11 6799 7949</p>
-            <p>Cabildo 1458 1st floor,</p>
-            <p>Buenos Aires</p>
-            <br>
-            <p id="raar">SEE ON MAP↗</p>
-        </div>
-        <div class="card3">
-            <p>WANT TO BE THE SMARTEST <br> IN YOUR OFFICE?</p>
-            <br>
-            <p id="raar">SING UP FOR OUR NEWSLETTER <i class="fa-solid fa-arrow-right"></i></p>
-            <br>
-            <br>
-            <br>
-            <p>FOLLOW US</p>
-            <div id="icon">
-                <i class="fa-brands fa-behance"></i>
-                <i class="fa-brands fa-dribbble"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-            </div>
-        </div>
-    </div>
+        <br>
+        <br>
+        <label for="">SUBJECT</label>
+        <br>
+        <br>
+        <input id="put" type="text" placeholder="Subject">
+        <br>
+        <br>
+        <label for="">MESSAGE</label>
+        <br>
+        <br>
+        <input id="put-it" type="text" placeholder="Message">
+    </form>
+    <br>
+    <button id="btn">Send Message</button>
+    <img id="img" src="https://psfiles.com/wp-content/uploads/2024/06/Free-Women-Working-Laptop-Mockup-PSD.jpg" alt=""
+        height="300" width="300">
 </body>
 
 </html>
